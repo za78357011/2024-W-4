@@ -1,0 +1,88 @@
+/* footer */
+.footer {
+  background: $primary;
+  &-nav {
+    border-bottom: 3px solid #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
+  }
+  &-menu {
+    display: flex;
+    align-items: center;
+    @include mobile-large {
+      display: none;
+    }
+    li {
+      padding: 20px 0;
+      margin-right: 24px;
+    }
+  }
+  .contact-us .phone,
+  .email {
+    display: flex;
+    color: white;
+    gap: 12px;
+    .material-symbols-outlined {
+      font-size: 48px;
+      @include mobile-large {
+        font-size: 24px;
+      }
+    }
+    a {
+      @include mobile-large {
+        font-size: 16px;
+        display: flex;
+      }
+    }
+  }
+  .contact-us .email {
+    padding-bottom: 24px;
+  }
+  .contact-us p {
+    font-size: 36px;
+  }
+  .footer-nav-right .icon {
+    display: flex;
+
+    .media-icon {
+      padding: 0 16px;
+      @include mobile-large {
+        padding: 0 8px;
+      }
+      img {
+        width: 48px;
+        @include pad {
+          width: 40px;
+        }
+        @include mobile-large {
+          width: 24px;
+        }
+      }
+    }
+  }
+  .copyright {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    padding-bottom: 24px;
+    @include mobile-large{
+      flex-direction: column;
+    }
+    span {
+      margin-bottom: 12px;
+    }
+    .remark {
+      display: flex;
+      @include mobile-large{
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.media-icon:hover {
+  transform: scale(1.2);
+}
+

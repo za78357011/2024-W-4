@@ -1,0 +1,56 @@
+/* header */
+.header {
+  background: $primary;
+  padding: 16px;
+  @include mobile-large {
+    padding: 0;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include mobile-large {
+      flex-direction: column;
+      max-width: 100%;
+      align-items: flex-start;
+    }
+  }
+  .logo {
+    display: flex;
+    img {
+      width: 80px;
+      @include mobile-large {
+        margin: 12px 0 0 12px;
+      }
+    }
+  }
+  .nav {
+    display: flex;
+    @include mobile-large {
+      flex-wrap: wrap;
+      margin-top: 12px;
+      width: 100%;
+    }
+    &-item {
+      @include mobile-large {
+        width: 50%;
+        border: 1px solid white;
+        text-align: center;
+      }
+    }
+    &-item a {
+      font-size: 20px;
+      padding: 8px 32px;
+      @include mobile-large {
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .px-sm-0 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
